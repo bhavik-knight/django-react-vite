@@ -1,0 +1,63 @@
+# django
+
+python -m pip install pipenv
+
+pipenv shell
+pipenv install django
+django-admin startproject backend
+
+
+# react (vite)
+npm create vite@latest
+<give project name: frontend>
+cd frontend
+npm install
+npm run dev
+
+# restructruing the project
+index.html => src
+in index.html => made changes according to the paths for icons/assests
+
+deleted public, assests
+added favicon.ico in src
+
+renamed main.jsx to index.jsx
+index.jsx and App.jsx were modified and kept at minimal counter button
+
+## vite.config.js should look like this to make this all changes work
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    manifest: true,
+  },
+  base: process.env.mode === "production" ? "/static/" : "/",
+  root: "./src",
+  server: {
+    port: 3000,
+    watch: {
+      usePolling: true,
+    },
+  },
+})s
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    manifest: true,
+  },
+  base: process.env.mode === "production" ? "/static/" : "/",
+  root: "./src",
+  server: {
+    port: 3000,
+    watch: {
+      usePolling: true,
+    },
+  },
+})
+
+
+# references
+## youtube video:
+https://www.youtube.com/watch?v=FCyYIVfDkhY
+
+## hot-reload
+chakra-UI propsed changes for vite.config.js file - server-watch-usePolling->true

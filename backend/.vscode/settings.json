@@ -1,0 +1,4 @@
+{
+    "vim.smartRelativeLine": true,
+    "python.analysis.typeCheckingMode": "basic"
+}
